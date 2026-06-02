@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Código Lunar — O Sistema de Reconexão Cíclica</title>
+<meta name="description" content="Como Transformar Sua Montanha-Russa Emocional na Sua Maior Fonte de Poder Feminino em Apenas 28 Dias.">
+
+<!-- FACEBOOK PIXEL - ADICIONAR AQUI -->
+
+<!-- GOOGLE TAG MANAGER - ADICIONAR AQUI -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0A0A0B;
+  --gold:#D4B777;
+  --gold-grad:linear-gradient(135deg,#c9a227,#D4B777,#e8c84a);
+  --text:#F8F7FD;
+  --text-2:#e5e5e5;
+  --red:#ef4444;
+  --surface:rgba(255,255,255,0.04);
+  --card-border:rgba(212,183,119,0.2);
+  --card-border-hover:rgba(212,183,119,0.5);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:18px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+  font-family:"DM Serif Display",Georgia,serif;
+  font-weight:600;
+  line-height:1.2;
+}
+
+img{max-width:100%;display:block;}
+
+a{text-decoration:none;color:inherit;}
+
+.gold{
+  color:var(--gold);
+  text-shadow:0 0 20px rgba(212,183,119,0.5);
+}
+
+/* ===== Layout ===== */
+.section{
+  position:relative;
+  padding:80px 112px;
+  overflow:hidden;
+}
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+
+h1{font-size:58px;}
+h2{font-size:46px;}
+h3{font-size:28px;}
+
+.section-title{
+  text-align:center;
+  margin-bottom:16px;
+}
+.section-subtitle{
+  text-align:center;
+  color:var(--text-2);
+  max-width:760px;
+  margin:0 auto 48px;
+}
+.divider{
+  width:80px;
+  height:3px;
+  margin:20px auto 0;
+  background:var(--gold-grad);
+  border-radius:2px;
+}
+
+/* ===== Light effects ===== */
+.glow{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:0;
+  background:radial-gradient(circle,rgba(205,184,255,1) 0%,rgba(0,0,0,0) 70%);
+}
+.glow-1{top:10%;right:-5%;width:384px;height:384px;filter:blur(64px);opacity:.18;}
+.glow-2{top:50%;left:50%;width:700px;height:700px;transform:translate(-50%,-50%);opacity:.10;}
+.glow-3{bottom:0;left:-5%;width:500px;height:500px;filter:blur(64px);opacity:.12;
+  background:radial-gradient(circle,rgba(212,183,119,1) 0%,rgba(0,0,0,0) 70%);}
+
+/* ===== CTA Button ===== */
+.cta{
+  display:block;
+  width:100%;
+  max-width:480px;
+  margin:32px auto 0;
+  text-align:center;
+  background:var(--gold-grad);
+  color:#0A0A0B;
+  border:none;
+  border-radius:50px;
+  padding:20px 48px;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  cursor:pointer;
+  box-shadow:0 0 30px rgba(212,183,119,0.4);
+  transition:transform .3s ease,box-shadow .3s ease;
+  animation:ctaPulse 2.4s ease-in-out infinite;
+}
+.cta:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 50px rgba(212,183,119,0.65);
+}
+@keyframes ctaPulse{
+  0%,100%{box-shadow:0 0 30px rgba(212,183,119,0.4);}
+  50%{box-shadow:0 0 45px rgba(212,183,119,0.6);}
+}
+
+/* ===== Cards ===== */
+.card{
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:16px;
+  padding:32px;
+  transition:border-color .3s ease,transform .3s ease;
+}
+.card:hover{
+  border-color:var(--card-border-hover);
+  transform:translateY(-4px);
+}
+
+/* ===== Animations on scroll ===== */
+.animate-on-scroll{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+.animate-on-scroll.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(#09090B 0%,#1F1528 50%,#131018 100%);
+  text-align:center;
+  padding-top:64px;
+}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;
+  color:var(--text);
+  text-shadow:rgba(205,184,255,0.2) 0 0 60px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.hero-sub1{
+  font-size:22px;
+  color:#fff;
+  margin-top:22px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+.hero-sub2{
+  font-size:18px;
+  color:var(--text-2);
+  margin-top:10px;
+}
+.play-bar{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:#000;
+  border-radius:6px;
+  padding:14px 20px;
+  max-width:760px;
+  margin:32px auto 0;
+}
+.play-bar .icon{color:var(--gold);font-size:24px;flex-shrink:0;}
+.play-bar h2{font-size:18px;font-family:"DM Serif Display",serif;}
+.video-wrap{
+  max-width:760px;
+  margin:16px auto 0;
+  aspect-ratio:16/9;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--card-border);
+  box-shadow:0 0 60px rgba(124,58,237,0.25);
+}
+.video-wrap iframe{width:100%;height:100%;border:0;display:block;}
+.hero-promise{
+  font-size:24px;
+  color:var(--text);
+  max-width:880px;
+  margin:36px auto 0;
+  font-family:"DM Serif Display",serif;
+}
+.guarantee-line{
+  font-family:"DM Serif Display",serif;
+  font-size:18px;
+  color:var(--text-2);
+  margin-top:18px;
+  text-align:center;
+}
+
+/* ===== DORES grid ===== */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.dor-card{display:flex;gap:16px;align-items:flex-start;}
+.dor-icon{
+  flex-shrink:0;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:rgba(239,68,68,0.12);
+  color:var(--red);
+}
+.dor-icon svg{width:20px;height:20px;}
+.dor-card p{color:var(--text-2);margin:0;font-size:17px;}
+.dores-conclusao{
+  text-align:center;
+  font-family:"DM Serif Display",serif;
+  font-size:24px;
+  color:var(--gold);
+  margin-top:48px;
+}
+
+/* ===== DESCOBERTA ===== */
+.descoberta-intro{
+  text-align:center;
+  color:var(--text-2);
+  max-width:820px;
+  margin:0 auto 20px;
+}
+.destaque-frase{
+  color:var(--gold);
+  font-family:"DM Serif Display",serif;
+  font-size:26px;
+}
+.descoberta-bloco{
+  background:var(--surface);
+  border-left:3px solid var(--gold);
+  border-radius:12px;
+  padding:28px 32px;
+  max-width:880px;
+  margin:32px auto;
+}
+.descoberta-bloco p{color:var(--text-2);}
+.descoberta-bloco p + p{margin-top:16px;}
+.insights-subtitulo{text-align:center;margin:48px 0 28px;}
+.insight-card{padding:24px;}
+.insight-card p{margin:0;color:var(--text-2);}
+.insight-highlight{color:var(--gold);font-weight:700;}
+
+/* ===== PRODUTO ===== */
+.produto-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:48px;
+  align-items:flex-start;
+  margin-top:24px;
+}
+.produto-capa{
+  border-radius:16px;
+  border:1px solid var(--card-border);
+  margin:0 auto;
+  max-width:360px;
+}
+.produto-cta-box{
+  text-align:center;
+  margin-top:24px;
+}
+.produto-cta-texto{color:var(--text-2);margin-bottom:14px;}
+.produto-col-texto p{color:var(--text-2);margin-bottom:16px;}
+.produto-texto-principal{font-size:19px;}
+.produto-tech-title{color:var(--gold);font-weight:700;margin:8px 0;}
+.produto-bullets li{
+  list-style:none;
+  color:var(--text-2);
+  margin-bottom:8px;
+}
+.produto-subtitulo-secundario{
+  color:var(--text);
+  margin:28px 0 16px;
+}
+.produto-lista{list-style:none;}
+.produto-item{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin-bottom:12px;
+  color:var(--text-2);
+}
+.produto-item-texto{color:var(--text-2);}
+.produto-texto-destaque-final{
+  background:rgba(212,183,119,0.08);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  padding:20px;
+  color:var(--text)!important;
+  font-family:"DM Serif Display",serif;
+  margin-top:8px;
+}
+
+/* ===== VANTAGENS ===== */
+.vantagem-card-header{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.vantagem-icone{
+  flex-shrink:0;width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(212,183,119,0.12);color:var(--gold);
+}
+.vantagem-icone svg{width:24px;height:24px;}
+.vantagem-card-titulo{font-size:22px;}
+.vantagem-card-texto{color:var(--text-2);margin:0;font-size:17px;}
+.vantagem-card-texto strong{color:var(--gold);}
+
+/* ===== AUTOPILOT ===== */
+.autopilot-list{max-width:840px;margin:0 auto;}
+.autopilot-item{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  padding:20px 24px;
+  margin-bottom:16px;
+}
+.autopilot-icon{
+  flex-shrink:0;width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(239,68,68,0.12);color:var(--red);
+}
+.autopilot-icon svg{width:18px;height:18px;}
+.autopilot-text{margin:0;color:var(--text-2);}
+.autopilot-highlight{color:var(--gold);font-weight:700;}
+
+/* ===== EBOOKS ===== */
+.ebook-card{position:relative;display:flex;flex-direction:column;}
+.ebook-badge,.bonus-badge{
+  align-self:flex-start;
+  background:var(--gold-grad);
+  color:#0A0A0B;
+  font-weight:700;
+  font-size:13px;
+  padding:6px 14px;
+  border-radius:50px;
+  margin-bottom:18px;
+}
+.ebook-mockup{
+  border-radius:12px;
+  margin:0 auto 18px;
+  max-width:240px;
+}
+.ebook-number{color:var(--gold);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+.ebook-name{font-size:22px;margin:6px 0 16px;}
+.ebook-list{list-style:none;}
+.ebook-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;color:var(--text-2);font-size:16px;}
+.star{color:var(--gold);flex-shrink:0;}
+
+/* ===== APP LOGOS ===== */
+.app-logo{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:9px;font-size:18px;
+  flex-shrink:0;
+}
+
+/* ===== BONUS ===== */
+.bonus-card{text-align:center;display:flex;flex-direction:column;align-items:center;}
+.bonus-image{border-radius:12px;margin-bottom:18px;max-width:260px;}
+.bonus-card-title{font-size:22px;margin-bottom:8px;}
+.bonus-value{color:var(--gold);font-weight:700;margin-bottom:12px;}
+.bonus-description{color:var(--text-2);font-size:16px;margin:0;}
+
+/* ===== CHECKOUT BOX ===== */
+.checkout-box{
+  max-width:620px;margin:0 auto;text-align:center;
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:24px;
+  padding:48px 40px;
+  box-shadow:0 0 60px rgba(212,183,119,0.12);
+}
+.urgency-badge{
+  display:inline-block;
+  background:rgba(239,68,68,0.15);
+  border:1px solid rgba(239,68,68,0.4);
+  color:#fca5a5;
+  font-weight:700;
+  font-size:15px;
+  padding:10px 20px;
+  border-radius:50px;
+  margin-bottom:28px;
+}
+.checkout-logo{max-width:160px;margin:0 auto 28px;}
+.deliverables-list{list-style:none;text-align:left;max-width:420px;margin:0 auto 28px;}
+.deliverables-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;color:var(--text-2);}
+.icon-star{color:var(--gold);flex-shrink:0;}
+.pricing-container{margin:24px 0;}
+.price-anchor{color:var(--text-2);text-decoration:line-through;font-size:18px;}
+.price-main{margin-top:6px;}
+.price-prefix{display:block;color:var(--text-2);font-size:16px;}
+.price-value{font-family:"DM Serif Display",serif;font-size:52px;color:var(--gold);text-shadow:0 0 30px rgba(212,183,119,0.4);}
+.checkout-footer{margin-top:24px;}
+.guarantee-text{color:var(--text-2);font-size:15px;margin-bottom:12px;}
+.security-badges{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;color:var(--text-2);font-size:14px;}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial-card{position:relative;}
+.testimonial-quote-icon{
+  font-family:"DM Serif Display",serif;
+  font-size:64px;color:var(--gold);line-height:1;opacity:.5;display:block;margin-bottom:-20px;
+}
+.testimonial-text{color:var(--text-2);font-style:italic;margin-bottom:24px;}
+.testimonial-profile{display:flex;align-items:center;gap:14px;}
+.testimonial-avatar{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--gold-grad);color:#0A0A0B;font-weight:700;font-size:20px;
+  font-family:"DM Serif Display",serif;
+}
+.testimonial-info h4{font-size:18px;}
+.testimonial-info p{color:var(--gold);font-size:14px;margin:0;}
+
+/* ===== IMPACT ===== */
+.impact-subtitle{display:block;text-align:center;color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:700;margin-bottom:10px;}
+.impact-text-block{max-width:820px;margin:0 auto 20px;text-align:center;}
+.impact-text-block p{color:var(--text-2);margin-bottom:14px;}
+.impact-highlight{
+  max-width:820px;margin:32px auto;
+  text-align:center;
+  font-family:"DM Serif Display",serif;
+  font-size:24px;color:var(--gold);
+  border-top:1px solid var(--card-border);
+  border-bottom:1px solid var(--card-border);
+  padding:28px 20px;
+}
+.cost-section{max-width:820px;margin:48px auto 0;}
+.cost-title{text-align:center;margin-bottom:24px;color:var(--red);}
+.cost-list{margin-bottom:24px;}
+.cost-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;}
+.cost-icon{color:var(--red);font-weight:700;flex-shrink:0;}
+.cost-text{color:var(--text-2);margin:0;}
+.value-anchor{max-width:760px;margin:56px auto 0;text-align:center;}
+.anchor-title{margin-bottom:28px;}
+.value-table{margin-bottom:28px;}
+.value-row{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  text-align:left;
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  padding:18px 24px;
+  margin-bottom:14px;
+}
+.value-label h4{font-size:18px;margin-bottom:4px;}
+.value-label p{color:var(--text-2);font-size:14px;margin:0;}
+.value-price{color:var(--gold);font-weight:700;white-space:nowrap;font-family:"DM Serif Display",serif;font-size:20px;}
+.real-value{font-size:20px;margin-bottom:32px;}
+.real-value span{color:var(--gold);font-family:"DM Serif Display",serif;font-size:28px;}
+.final-offer h4{font-size:28px;margin-bottom:14px;}
+.final-offer > p{color:var(--text-2);max-width:680px;margin:0 auto 28px;}
+.price-button{
+  display:inline-flex;flex-direction:column;align-items:center;gap:4px;
+  background:var(--gold-grad);color:#0A0A0B;
+  border-radius:20px;padding:22px 56px;margin:0 auto;
+  transition:transform .3s ease,box-shadow .3s ease;
+  box-shadow:0 0 30px rgba(212,183,119,0.4);
+}
+.price-button:hover{transform:scale(1.03);box-shadow:0 0 50px rgba(212,183,119,0.65);}
+.btn-old-price{text-decoration:line-through;font-size:15px;opacity:.7;}
+.btn-new-price{font-family:"DM Serif Display",serif;font-size:44px;font-weight:700;line-height:1;}
+.btn-subtext{text-transform:uppercase;font-weight:700;font-size:14px;letter-spacing:.5px;}
+.final-cta-text{margin-top:28px;}
+.final-cta-text p{color:var(--text-2);margin-bottom:6px;}
+
+/* ===== FINAL FLOW ===== */
+.guarantee-box{
+  max-width:920px;margin:0 auto 64px;text-align:center;
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:24px;
+  padding:48px 40px;
+}
+.guarantee-title{margin-bottom:16px;}
+.guarantee-intro{color:var(--text-2);max-width:680px;margin:0 auto 32px;}
+.guarantee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;}
+.guarantee-item{
+  background:rgba(212,183,119,0.06);
+  border:1px solid var(--card-border);
+  border-radius:14px;padding:24px;
+}
+.guarantee-item h4{color:var(--gold);font-size:18px;margin-bottom:10px;}
+.guarantee-item p{color:var(--text-2);font-size:15px;margin:0;}
+.guarantee-footer{color:var(--text);font-family:"DM Serif Display",serif;font-size:20px;margin-top:32px;}
+
+.scarcity-box{
+  max-width:920px;margin:0 auto 64px;text-align:center;
+  background:rgba(239,68,68,0.08);
+  border:1px solid rgba(239,68,68,0.35);
+  border-radius:24px;padding:40px;
+}
+.scarcity-title{color:#fca5a5;margin-bottom:18px;}
+.scarcity-text{color:var(--text-2);max-width:760px;margin:0 auto;}
+.scarcity-text strong{color:var(--gold);}
+
+.decision-section{max-width:920px;margin:0 auto 64px;}
+.decision-title{text-align:center;margin-bottom:32px;}
+.decision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.decision-card{border-radius:18px;padding:32px;}
+.decision-old{background:var(--surface);border:1px solid rgba(255,255,255,0.08);}
+.decision-old h3{color:var(--text-2);margin-bottom:16px;}
+.decision-old p{color:var(--text-2);margin-bottom:14px;}
+.decision-new{background:rgba(212,183,119,0.08);border:1px solid var(--card-border-hover);box-shadow:0 0 40px rgba(212,183,119,0.15);}
+.decision-new h3{color:var(--gold);margin-bottom:16px;}
+.decision-new p{color:var(--text);margin-bottom:14px;}
+.decision-footer{text-align:center;color:var(--text-2);max-width:780px;margin:32px auto 0;font-style:italic;}
+
+.final-checkout-box{
+  max-width:620px;margin:0 auto;text-align:center;
+  background:var(--surface);
+  border:1px solid var(--card-border-hover);
+  border-radius:24px;padding:48px 40px;
+  box-shadow:0 0 60px rgba(212,183,119,0.15);
+}
+.final-checkout-title{margin-bottom:14px;}
+.final-checkout-subtitle{color:var(--gold);font-weight:700;margin-bottom:24px;}
+.final-list{list-style:none;text-align:left;max-width:460px;margin:0 auto 28px;}
+.final-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;color:var(--text-2);}
+.check-icon{flex-shrink:0;}
+.total-old{color:var(--text-2);text-decoration:line-through;margin-bottom:8px;}
+.price-tag{margin-bottom:8px;}
+.installments{font-size:20px;color:var(--text);}
+.price-or{color:var(--text-2);font-size:14px;margin:4px 0;}
+.main-price{font-family:"DM Serif Display",serif;font-size:48px;color:var(--gold);text-shadow:0 0 30px rgba(212,183,119,0.4);}
+.safe-footer{color:var(--text-2);font-size:14px;margin-top:18px;}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:820px;margin:0 auto;}
+.accordion{
+  background:var(--surface);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  margin-bottom:14px;
+  overflow:hidden;
+  transition:border-color .3s ease;
+}
+.accordion.open{border-color:var(--card-border-hover);}
+.accordion-header{
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:22px 28px;cursor:pointer;
+}
+.accordion-header h2{font-size:19px;font-family:"DM Serif Display",serif;}
+.accordion-chevron{color:var(--gold);transition:transform .3s ease;flex-shrink:0;font-size:14px;}
+.accordion.open .accordion-chevron{transform:rotate(180deg);}
+.accordion-content{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease;
+}
+.accordion-content p{padding:0 28px 22px;color:var(--text-2);}
+
+/* ===== FOOTER ===== */
+.final-footer{background:linear-gradient(#0A0A0B,#0c0a10);padding:80px 112px;}
+.guarantee-seal{text-align:center;max-width:680px;margin:0 auto 56px;}
+.seal-circle{
+  width:130px;height:130px;border-radius:50%;margin:0 auto 24px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:3px solid var(--gold);
+  background:rgba(212,183,119,0.08);
+  box-shadow:0 0 40px rgba(212,183,119,0.25);
+}
+.seal-number{font-family:"DM Serif Display",serif;font-size:48px;color:var(--gold);line-height:1;}
+.seal-text{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:14px;}
+.guarantee-headline{font-size:30px;margin-bottom:12px;}
+.guarantee-sub{color:var(--text-2);}
+.post-scriptum{max-width:760px;margin:0 auto 48px;}
+.ps-item{margin-bottom:28px;}
+.ps-label{color:var(--gold);font-weight:700;font-family:"DM Serif Display",serif;font-size:20px;}
+.ps-text{color:var(--text-2);margin-top:8px;}
+.ps-quote{
+  background:rgba(212,183,119,0.08);
+  border-left:3px solid var(--gold);
+  border-radius:8px;
+  padding:18px 24px;margin:16px 0;
+  font-style:italic;color:var(--text);
+}
+.ps-text strong{color:var(--gold);}
+.footer-bottom{
+  border-top:1px solid var(--card-border);
+  padding-top:40px;margin-top:48px;
+  display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;
+}
+.footer-logo-img{max-width:140px;opacity:.7;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease;}
+.footer-logo-img:hover{opacity:1;filter:grayscale(0%);}
+.footer-nav{display:flex;gap:24px;}
+.footer-nav a{color:var(--text-2);font-size:14px;}
+.footer-nav a:hover{color:var(--gold);}
+.copyright{color:var(--text-2);font-size:14px;}
+
+.mini-footer{background:#0A0A0B;border-top:1px solid var(--card-border);}
+.mini-footer-container{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:24px 112px;
+}
+.mini-footer-copy{color:#cccccc;font-size:14px;}
+.mini-footer-logo img{width:100px;opacity:.6;filter:grayscale(100%);transition:opacity .3s ease,filter .3s ease;}
+.mini-footer-logo img:hover{opacity:.9;filter:grayscale(0%);}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+  body{font-size:16px;}
+  .section{padding:60px 48px;}
+  .final-footer{padding:60px 48px;}
+  .mini-footer-container{padding:24px 48px;}
+  h1{font-size:40px;}
+  h2{font-size:34px;}
+  h3{font-size:24px;}
+  .grid-3,.grid-2,.produto-grid,.guarantee-grid,.decision-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:480px){
+  .section{padding:48px 24px;}
+  .final-footer{padding:48px 24px;}
+  .mini-footer-container{padding:32px 24px;flex-direction:column-reverse;gap:24px;text-align:center;}
+  h1{font-size:32px;}
+  h2{font-size:28px;}
+  h3{font-size:20px;}
+  .hero h1{font-size:32px;}
+  .hero-sub1{font-size:16px;}
+  .hero-promise{font-size:19px;}
+  .price-value{font-size:42px;}
+  .btn-new-price{font-size:36px;}
+  .cta{padding:18px 28px;font-size:16px;}
+  .price-button{padding:20px 32px;}
+  .glow-1,.glow-2,.glow-3{opacity:.05;}
+  .checkout-box,.final-checkout-box,.guarantee-box,.scarcity-box{padding:32px 22px;}
+  .value-row{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="section hero">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <h1 class="animate-on-scroll">Como Transformar Sua Montanha-Russa Emocional na Sua Maior Fonte de <span class="gold">Poder Feminino</span> em Apenas 28 Dias</h1>
+    <p class="hero-sub1 animate-on-scroll">USANDO O PRIMEIRO SISTEMA DIGITAL INTERATIVO DE RECONEXÃO CÍCLICA</p>
+    <p class="hero-sub2 animate-on-scroll">(Funciona offline e se adapta ao SEU ritmo único)</p>
+
+    <div class="play-bar animate-on-scroll">
+      <span class="icon">►</span>
+      <h2>Aperte o play (certifique-se de que o som esteja ligado!)</h2>
+    </div>
+    <div class="video-wrap animate-on-scroll">
+      <iframe src="https://www.youtube.com/embed/ZY_Dh-c7MIU?enablejsapi=1&rel=0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        data-provider="youtube" data-video-id="ZY_Dh-c7MIU" allowfullscreen></iframe>
+    </div>
+
+    <p class="hero-promise animate-on-scroll">O PRIMEIRO Sistema com Web Apps Interativos que funciona como ter uma terapeuta especialista 24h no seu celular - Sem precisar de internet após download</p>
+
+    <a class="cta animate-on-scroll" href="https://payments.clickmax.io/bI10iCcWPl">QUERO TRANSFORMAR MINHA VIDA AGORA</a>
+    <p class="guarantee-line animate-on-scroll">Garantia de reembolso de 30 dias</p>
+  </div>
+</section>
+
+<!-- ============ DORES ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Se Você É Uma Mulher Que...</h2>
+    <div class="grid-3">
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Acorda cansada mesmo depois de dormir 8 horas e se pergunta "por que me sinto assim?"</p>
+      </div>
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Olha no espelho e não reconhece mais quem se tornou</p>
+      </div>
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Vive numa montanha-russa emocional sem entender de onde vêm esses altos e baixos</p>
+      </div>
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Se sente culpada por não conseguir "dar conta de tudo" como as outras mulheres parecem conseguir</p>
+      </div>
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Está cansada de viver no automático, cumprindo papéis sem saber mais quem você realmente é</p>
+      </div>
+      <div class="card dor-card animate-on-scroll">
+        <div class="dor-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p>Tentou terapia, coaching e autoajuda mas nada parece "grudar" ou criar mudança real</p>
+      </div>
+    </div>
+    <p class="dores-conclusao animate-on-scroll">...Então esta pode ser a descoberta mais importante da sua vida.</p>
+  </div>
+</section>
+
+<!-- ============ DESCOBERTA ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">A Descoberta Que Está <span class="gold">Chocando Especialistas</span> em Desenvolvimento Feminino</h2>
+    <p class="descoberta-intro animate-on-scroll">Por anos, você foi ensinada que ter "dias ruins" emocionalmente significava que você era instável. Que precisava ser sempre forte, sempre produtiva, sempre disponível.</p>
+    <p class="descoberta-intro destaque-frase animate-on-scroll">Mas uma descoberta revolucionária está mudando tudo.</p>
+    <div class="descoberta-bloco animate-on-scroll">
+      <p>Cientistas descobriram que o corpo feminino possui ciclos naturais de energia, criatividade e introspecção que foram completamente ignorados pela sociedade moderna - criando uma epidemia silenciosa de mulheres vivendo "desconectadas" de si mesmas.</p>
+      <p>O resultado? Milhões de mulheres como você se sentem perdidas na própria vida.</p>
+    </div>
+    <div class="insights-secao">
+      <h3 class="insights-subtitulo animate-on-scroll">O Que Ninguém Te Contou Sobre Seus "Problemas"</h3>
+      <div class="grid-2">
+        <div class="card insight-card animate-on-scroll"><p><span class="insight-highlight">Suas oscilações emocionais não são defeitos</span> - são seu GPS interno natural.</p></div>
+        <div class="card insight-card animate-on-scroll"><p><span class="insight-highlight">Sua irritabilidade inexplicável não é instabilidade</span> - é sua bússola tentando te guiar.</p></div>
+        <div class="card insight-card animate-on-scroll"><p><span class="insight-highlight">Sua sensação de estar "no automático" não é fraqueza</span> - é o resultado de anos lutando contra sua própria natureza.</p></div>
+        <div class="card insight-card animate-on-scroll"><p><span class="insight-highlight">E existe uma solução científica e prática para isso.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUTO ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <div class="produto-header">
+      <h2 class="section-title animate-on-scroll">Apresento o <span class="gold">Código Lunar</span></h2>
+      <p class="section-subtitle animate-on-scroll">O Sistema de Reconexão Cíclica</p>
+    </div>
+    <div class="produto-grid">
+      <div class="produto-col-imagem animate-on-scroll">
+        <img class="produto-capa" alt="Capa Oficial do Código Lunar" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/a492d0cb-ecc7-4585-aa8c-028f65539d69" loading="lazy"/>
+        <div class="produto-cta-box">
+          <p class="produto-cta-texto">Clique abaixo para ver a oferta completa:</p>
+          <a class="cta" href="https://payments.clickmax.io/bI10iCcWPl">QUERO O CÓDIGO LUNAR AGORA</a>
+        </div>
+      </div>
+      <div class="produto-col-texto animate-on-scroll">
+        <p class="produto-texto-principal">O primeiro e único método que ensina mulheres sobrecarregadas a transformarem seus altos e baixos emocionais na sua maior fonte de poder e clareza mental - sem terapia cara ou práticas místicas complicadas.</p>
+        <p>Este não é mais um curso com PDFs esquecidos. São WEB APPS INTERATIVOS que funcionam como os aplicativos do seu celular - salvam seu progresso automaticamente e evoluem com você.</p>
+        <p class="produto-tech-title">PRIMEIRA TECNOLOGIA DO TIPO NO BRASIL:</p>
+        <ul class="produto-bullets">
+          <li>• Interface intuitiva como Instagram/WhatsApp</li>
+          <li>• Funciona offline após download</li>
+          <li>• Salva automaticamente seu progresso</li>
+          <li>• Personaliza conforme SEU ciclo único</li>
+          <li>• Acesso em qualquer dispositivo</li>
+        </ul>
+        <h3 class="produto-subtitulo-secundario">Por Que o Código Lunar Funciona Quando Tudo Mais Falha?</h3>
+        <ul class="produto-lista">
+          <li class="produto-item"><span class="produto-check">❌</span><span class="produto-item-texto">Enquanto terapias tradicionais levam anos e se focam apenas no passado...</span></li>
+          <li class="produto-item"><span class="produto-check">❌</span><span class="produto-item-texto">Enquanto coaching genérico ignora sua biologia feminina única...</span></li>
+          <li class="produto-item"><span class="produto-check">❌</span><span class="produto-item-texto">Enquanto práticas esotéricas são complexas demais para sua agenda lotada...</span></li>
+        </ul>
+        <p class="produto-texto-destaque-final">O Código Lunar utiliza o Fenômeno RCI™ (Reconexão por Ciclos Internos) que funciona contornando completamente essas armadilhas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VANTAGENS ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Com o Código Lunar você ganha uma<br><span class="gold">VANTAGEM DESPROPORCIONAL</span></h2>
+    <p class="section-subtitle animate-on-scroll">Em relação a 99% das mulheres que vivem no automático, sem saber o que as move.</p>
+    <div class="grid-2">
+      <div class="card animate-on-scroll">
+        <div class="vantagem-card-header">
+          <div class="vantagem-icone"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+          <h3 class="vantagem-card-titulo">Domínio Emocional Absoluto</h3>
+        </div>
+        <p class="vantagem-card-texto">Você não será mais refém das suas emoções, mas sim a <strong>arquiteta</strong> delas. Imagine ter clareza total sobre o que sente, quando sente e por que sente - transformando cada emoção em combustível para suas conquistas ao invés de sabotagem.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="vantagem-card-header">
+          <div class="vantagem-icone"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+          <h3 class="vantagem-card-titulo">Clareza Mental de Elite</h3>
+        </div>
+        <p class="vantagem-card-texto">Você terá uma <strong>clareza mental</strong> que te permitirá tomar decisões rápidas e assertivas. Enquanto outras mulheres ficam paralisadas pela dúvida e insegurança, você age com precisão cirúrgica, sabendo exatamente o que fazer em cada momento.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="vantagem-card-header">
+          <div class="vantagem-icone"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle r="9" cx="12" cy="12" stroke="currentColor" stroke-width="2"></circle><path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></div>
+          <h3 class="vantagem-card-titulo">Vida Reorganizada e Sem Sobrecarga</h3>
+        </div>
+        <p class="vantagem-card-texto">Você vai <strong>reorganizar sua vida</strong> respeitando sua biologia, eliminando a sobrecarga. Descubra como trabalhar a favor dos seus ritmos naturais, não contra eles, e alcance mais fazendo menos - algo que homens jamais entenderão.</p>
+      </div>
+      <div class="card animate-on-scroll">
+        <div class="vantagem-card-header">
+          <div class="vantagem-icone"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+          <h3 class="vantagem-card-titulo">Poder Feminino Ancestral</h3>
+        </div>
+        <p class="vantagem-card-texto">Você terá acesso a um <strong>poder feminino</strong> que a maioria das mulheres nem sabe que existe. Um magnetismo natural que atrai oportunidades, relacionamentos profundos e transforma você na versão mais poderosa e autêntica de si mesma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTOPILOT ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <h2 class="section-title animate-on-scroll"><span class="autopilot-highlight">Uma das piores sensações</span> é continuar vivendo no piloto automático mesmo depois de tentar várias soluções</h2>
+    <div class="autopilot-list">
+      <div class="autopilot-item animate-on-scroll">
+        <div class="autopilot-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p class="autopilot-text">Você investe tempo em terapias e métodos sem ver mudança real no seu dia a dia</p>
+      </div>
+      <div class="autopilot-item animate-on-scroll">
+        <div class="autopilot-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p class="autopilot-text">O retorno emocional não condiz com seu esforço de tentar se conhecer melhor</p>
+      </div>
+      <div class="autopilot-item animate-on-scroll">
+        <div class="autopilot-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p class="autopilot-text">Você não sabe como acessar sua essência verdadeira e vive se perguntando "quem eu realmente sou?"</p>
+      </div>
+      <div class="autopilot-item animate-on-scroll">
+        <div class="autopilot-icon"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <p class="autopilot-text">Você quer sair do automático e se reconectar consigo mesma mas não sabe por onde começar</p>
+      </div>
+    </div>
+    <a class="cta animate-on-scroll" href="https://payments.clickmax.io/bI10iCcWPl">QUERO TRANSFORMAR MINHA VIDA AGORA</a>
+  </div>
+</section>
+
+<!-- ============ EBOOKS ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <div class="cl-ebooks-header">
+      <h2 class="section-title animate-on-scroll">O Que Você Descobrirá No <span class="gold">Código Lunar</span></h2>
+      <div class="divider animate-on-scroll"></div>
+    </div>
+    <div class="grid-3" style="margin-top:48px;">
+      <!-- EBOOK 1 -->
+      <div class="card ebook-card animate-on-scroll">
+        <span class="ebook-badge">VALOR: R$ 297</span>
+        <img class="ebook-mockup" alt="Mapeamento das 4 Fases Internas" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/sdtONRaqAKbsBpBw.png" loading="lazy"/>
+        <p class="ebook-number"><span class="app-logo" style="background:rgba(124,58,237,0.15);color:#7C3AED;">☽</span> Ebook 1</p>
+        <h3 class="ebook-name">"Mapeamento das 4 Fases Internas"</h3>
+        <h3 class="ebook-name" style="font-size:18px;color:var(--gold);">NÃO É UM PDF! É um sistema inteligente que:</h3>
+        <ul class="ebook-list">
+          <li><span class="star">✨</span><span>Mapeia automaticamente SEU ciclo único</span></li>
+          <li><span class="star">✨</span><span>Cria relatórios personalizados do seu progresso</span></li>
+          <li><span class="star">✨</span><span>Funciona offline no seu celular/computador</span></li>
+          <li><span class="star">✨</span><span>Evolui conforme você usa (tecnologia adaptativa)</span></li>
+          <li><span class="star">✨</span><span>Interface amigável - não precisa ser "tech"</span></li>
+        </ul>
+      </div>
+      <!-- EBOOK 2 -->
+      <div class="card ebook-card animate-on-scroll">
+        <span class="ebook-badge">VALOR: R$ 197</span>
+        <img class="ebook-mockup" alt="Protocolo de Reconexão Prática" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/ORWcOKPRnZTPLUoA.png" loading="lazy"/>
+        <p class="ebook-number"><span class="app-logo" style="background:rgba(5,150,105,0.15);color:#059669;">☽</span> Ebook 2</p>
+        <h3 class="ebook-name">"Protocolo de Reconexão Prática"</h3>
+        <ul class="ebook-list">
+          <li><span class="star">✨</span><span>Os 4 pilares de reorganização da vida baseados nas suas fases naturais</span></li>
+          <li><span class="star">✨</span><span>A estratégia "Surfar ao Invés de Lutar" que elimina 90% do estresse emocional em 14 dias</span></li>
+          <li><span class="star">✨</span><span>Como criar rotinas que fluem naturalmente com sua energia</span></li>
+          <li><span class="star">✨</span><span>O segredo para tomar decisões com clareza cristalina seguindo seu ciclo interno</span></li>
+          <li><span class="star">✨</span><span>Por que você não precisa ser igual todos os dias - e como usar isso como vantagem</span></li>
+        </ul>
+      </div>
+      <!-- EBOOK 3 -->
+      <div class="card ebook-card animate-on-scroll">
+        <span class="ebook-badge">VALOR: R$ 147</span>
+        <img class="ebook-mockup" alt="Integração e Sustentação" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/uejDRhMUwymJCuao.png" loading="lazy"/>
+        <p class="ebook-number"><span class="app-logo" style="background:rgba(14,165,233,0.15);color:#0EA5E9;">☽</span> Ebook 3</p>
+        <h3 class="ebook-name">"Integração e Sustentação"</h3>
+        <ul class="ebook-list">
+          <li><span class="star">✨</span><span>Como manter a conexão consigo mesma no longo prazo (mesmo com pressões externas)</span></li>
+          <li><span class="star">✨</span><span>Estratégias para lidar com pessoas que não entendem sua nova forma de viver</span></li>
+          <li><span class="star">✨</span><span>O "Manual de Emergência" para momentos de sobrecarga emocional</span></li>
+          <li><span class="star">✨</span><span>Como influenciar positivamente outras mulheres ao seu redor sem forçar nada</span></li>
+          <li><span class="star">✨</span><span>A técnica de "Blindagem Energética" contra opiniões que tentam te desconectar</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BONUS ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <div class="cl-bonus-header">
+      <h2 class="section-title animate-on-scroll">Mas Isso É Só o Começo...<br><span class="gold">Os Bônus Exclusivos</span></h2>
+      <div class="divider animate-on-scroll"></div>
+    </div>
+    <div class="grid-3" style="margin-top:48px;">
+      <div class="card bonus-card animate-on-scroll">
+        <span class="bonus-badge">🎁 BÔNUS 1</span>
+        <img class="bonus-image" alt="Diário de Empoderamento Feminino" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/11df0e11-0b43-4935-96ab-0d7cfb6d63a6" loading="lazy"/>
+        <h3 class="bonus-card-title"><span class="app-logo" style="background:rgba(192,132,252,0.15);color:#C084FC;">✦</span> Diário de Empoderamento Feminino</h3>
+        <p class="bonus-value">VALOR: R$ 97</p>
+        <p class="bonus-description">Um guia prático e luxuoso para registrar sua jornada de autodescoberta e fortalecer sua confiança diariamente.</p>
+      </div>
+      <div class="card bonus-card animate-on-scroll">
+        <span class="bonus-badge">🎁 BÔNUS 2</span>
+        <img class="bonus-image" alt="Coleção de Afirmações Lunares" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/65498ed7-6d82-4d1f-8a21-558fcf83ccc8" loading="lazy"/>
+        <h3 class="bonus-card-title">Coleção de Afirmações Lunares</h3>
+        <p class="bonus-value">VALOR: R$ 67</p>
+        <p class="bonus-description">Cartas digitais com afirmações poderosas alinhadas às fases da lua para reprogramar sua mente com sabedoria.</p>
+      </div>
+      <div class="card bonus-card animate-on-scroll">
+        <span class="bonus-badge">🎁 BÔNUS 3</span>
+        <img class="bonus-image" alt="BemLab" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/efa7cacd-36c5-47b2-a29a-c4bd21138b7b" loading="lazy"/>
+        <h3 class="bonus-card-title"><span class="app-logo" style="background:rgba(233,30,99,0.15);color:#E91E63;">🧪</span> BemLab</h3>
+        <p class="bonus-value">VALOR: R$ 87</p>
+        <p class="bonus-description">Estratégias essenciais para manter o equilíbrio interior e cuidar da sua saúde emocional em todas as fases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKOUT BOX ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <div class="checkout-box animate-on-scroll">
+      <div class="urgency-badge">Apenas R$ 197,00 agora - o preço subirá para R$ 497,00 em breve!</div>
+      <div class="checkout-logo-wrapper">
+        <img class="checkout-logo" alt="Código Lunar Logo" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/dlVFGWKuHaWwPCuv.png" loading="lazy"/>
+      </div>
+      <ul class="deliverables-list">
+        <li><span class="icon-star">✦</span> Ebook "Mapeamento das 4 Fases Internas"</li>
+        <li><span class="icon-star">✦</span> Ebook "Protocolo de Reconexão Prática"</li>
+        <li><span class="icon-star">✦</span> Ebook "Integração e Sustentação"</li>
+        <li><span class="icon-star">✦</span> Diário de Reconexão Digital</li>
+        <li><span class="icon-star">✦</span> Todos os Bônus Exclusivos</li>
+      </ul>
+      <div class="pricing-container">
+        <div class="price-anchor">De R$ 652,00</div>
+        <div class="price-main">
+          <span class="price-prefix">Por apenas</span>
+          <span class="price-value">R$ 97,00</span>
+        </div>
+      </div>
+      <a class="cta" href="https://payments.clickmax.io/bI10iCcWPl">Obtenha acesso instantâneo</a>
+      <div class="checkout-footer">
+        <div class="guarantee-text">🛡️ Sua compra está protegida pela garantia de 30 dias</div>
+        <div class="security-badges">
+          <span>🔒 Pagamento Criptografado</span><span>✅ Acesso Imediato</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <div class="cl-testimonials-header">
+      <h2 class="section-title animate-on-scroll">O Que Mulheres Reais Estão Dizendo</h2>
+      <div class="divider animate-on-scroll"></div>
+    </div>
+    <div class="grid-3" style="margin-top:48px;">
+      <div class="card testimonial-card animate-on-scroll">
+        <span class="testimonial-quote-icon">“</span>
+        <p class="testimonial-text">"Finalmente entendi que não sou louca... Sempre pensei que tinha algo errado comigo por ter esses altos e baixos. Em 3 semanas usando o Código Lunar, recuperei minha paz."</p>
+        <div class="testimonial-profile">
+          <div class="testimonial-avatar">M</div>
+          <div class="testimonial-info"><h4>Mariana S.</h4><p>Aluna Código Lunar</p></div>
+        </div>
+      </div>
+      <div class="card testimonial-card animate-on-scroll">
+        <span class="testimonial-quote-icon">“</span>
+        <p class="testimonial-text">"Meu relacionamento mudou completamente. Meu marido sempre reclamava que eu estava 'estranha' em alguns dias. Agora ele entende meu ciclo e nós fluímos juntos."</p>
+        <div class="testimonial-profile">
+          <div class="testimonial-avatar">A</div>
+          <div class="testimonial-info"><h4>Ana Paula R.</h4><p>Aluna Código Lunar</p></div>
+        </div>
+      </div>
+      <div class="card testimonial-card animate-on-scroll">
+        <span class="testimonial-quote-icon">“</span>
+        <p class="testimonial-text">"Recuperei o comando da minha vida. Estava vivendo no piloto automático há anos. O Código Lunar me mostrou que eu estava apenas desconectada da minha própria natureza."</p>
+        <div class="testimonial-profile">
+          <div class="testimonial-avatar">C</div>
+          <div class="testimonial-info"><h4>Camila L.</h4><p>Aluna Código Lunar</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <div class="impact-header">
+      <span class="impact-subtitle animate-on-scroll">A Verdade Sobre Seus "Problemas"</span>
+      <h2 class="section-title animate-on-scroll">Por Que Você Precisa Agir Agora</h2>
+    </div>
+    <div class="impact-text-block animate-on-scroll">
+      <p>Se você chegou até aqui, é porque sabe que algo precisa mudar.</p>
+      <p>Você está cansada de viver no automático. Você está exausta de se sentir perdida na própria vida. Você está farta de se culpar por não conseguir ser "forte" todos os dias.</p>
+    </div>
+    <div class="impact-highlight animate-on-scroll">"Mas aqui está o que você precisa entender: Isso não é sua culpa. Você foi programada para ignorar sua própria natureza."</div>
+
+    <div class="cost-section">
+      <h3 class="cost-title animate-on-scroll">O Custo de Não Agir</h3>
+      <div class="impact-text-block animate-on-scroll">
+        <p>Se você continuar vivendo contra seus ritmos naturais, daqui a 5 anos você estará:</p>
+      </div>
+      <div class="cost-list animate-on-scroll">
+        <div class="cost-item"><span class="cost-icon">✕</span><p class="cost-text">Ainda mais exausta e desconectada de si mesma</p></div>
+        <div class="cost-item"><span class="cost-icon">✕</span><p class="cost-text">Ainda se culpando pelos seus altos e baixos naturais</p></div>
+        <div class="cost-item"><span class="cost-icon">✕</span><p class="cost-text">Ainda vivendo no automático, cumprindo papéis sem autenticidade</p></div>
+        <div class="cost-item"><span class="cost-icon">✕</span><p class="cost-text">Ainda se sentindo perdida, sem saber quem você realmente é</p></div>
+        <div class="cost-item"><span class="cost-icon">✕</span><p class="cost-text">Com relacionamentos superficiais porque você não consegue ser autêntica</p></div>
+      </div>
+      <div class="impact-text-block animate-on-scroll">
+        <p>O tempo não para. E cada dia que passa no "piloto automático" é um dia da sua vida verdadeira que você perde para sempre.</p>
+      </div>
+    </div>
+
+    <div class="value-anchor">
+      <h3 class="anchor-title animate-on-scroll">Quanto Vale Sua Reconexão Consigo Mesma?</h3>
+      <div class="value-table">
+        <div class="value-row animate-on-scroll">
+          <div class="value-label"><h4>Sessão de Terapia Tradicional</h4><p>(Leva anos para gerar mudanças profundas)</p></div>
+          <span class="value-price">R$ 200 /sessão</span>
+        </div>
+        <div class="value-row animate-on-scroll">
+          <div class="value-label"><h4>Processo de Coaching Individual</h4><p>(Geralmente ignora sua biologia feminina)</p></div>
+          <span class="value-price">R$ 3.000 - 8.000</span>
+        </div>
+        <div class="value-row animate-on-scroll">
+          <div class="value-label"><h4>Cursos de Desenvolvimento Pessoal</h4><p>(São genéricos demais)</p></div>
+          <span class="value-price">R$ 2.000 - 5.000</span>
+        </div>
+      </div>
+      <p class="real-value animate-on-scroll">O valor real deste sistema completo seria de <span>R$ 2.847</span></p>
+      <div class="final-offer animate-on-scroll">
+        <h4>Mas você não pagará isso.</h4>
+        <p>Como quero colocar este método nas mãos de apenas 500 mulheres comprometidas com sua transformação, você consegue acesso completo ao Código Lunar por apenas:</p>
+        <a class="price-button" href="https://payments.clickmax.io/bI10iCcWPl">
+          <span class="btn-old-price">De R$ 2.847</span>
+          <span class="btn-new-price">R$ 97</span>
+          <span class="btn-subtext">Aproveitar Oferta Vitalícia</span>
+        </a>
+        <div class="final-cta-text">
+          <p>Isso é menos que uma única sessão de terapia.</p>
+          <p>É menos que você gasta em um final de semana.</p>
+          <p>É menos que o valor de continuar vivendo perdida na sua própria vida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL FLOW ============ -->
+<section class="section">
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <!-- GARANTIA TRIPLA -->
+    <div class="guarantee-box animate-on-scroll">
+      <h2 class="guarantee-title">Minha Garantia Tripla Blindada</h2>
+      <p class="guarantee-intro">Estou tão confiante de que o Código Lunar vai transformar sua relação consigo mesma que ofereço uma Garantia Tripla de 30 Dias:</p>
+      <div class="guarantee-grid">
+        <div class="guarantee-item"><h4>✓ GARANTIA 1: Resultados</h4><p>Se em 30 dias você não sentir maior clareza sobre quem você realmente é, devolvemos 100% do seu dinheiro.</p></div>
+        <div class="guarantee-item"><h4>✓ GARANTIA 2: Praticidade</h4><p>Se o método for complexo demais para sua rotina corrida, reembolso total.</p></div>
+        <div class="guarantee-item"><h4>✓ GARANTIA 3: Conexão</h4><p>Se você não se reconectar com sua essência feminina verdadeira, seu dinheiro de volta.</p></div>
+      </div>
+      <p class="guarantee-footer">Você não tem absolutamente nada a perder e uma vida inteira de autenticidade para ganhar.</p>
+    </div>
+
+    <!-- ESCASSEZ -->
+    <div class="scarcity-box animate-on-scroll">
+      <h2 class="scarcity-title">ATENÇÃO: Esta Oferta Tem Data Para Acabar</h2>
+      <p class="scarcity-text">Esta oferta especial de <strong>R$ 97</strong> é limitada para as primeiras 500 mulheres que reconhecem que é hora de parar de viver no piloto automático.<br>Depois disso, o valor volta para <strong>R$ 497</strong> (o investimento normal para este nível de transformação).<br>Além disso, os bônus exclusivos só estão disponíveis nesta promoção.</p>
+    </div>
+
+    <!-- DECISÃO FINAL -->
+    <div class="decision-section">
+      <h2 class="decision-title animate-on-scroll">Sua Decisão Final</h2>
+      <div class="decision-grid">
+        <div class="decision-card decision-old animate-on-scroll">
+          <h3>ESCOLHA 1: Continue Como Está</h3>
+          <p>Feche esta página e continue vivendo no "piloto automático". Continue se culpando pelos seus altos e baixos naturais. Continue se sentindo perdida na própria vida.</p>
+          <p>Daqui a 1 ano, você estará exatamente no mesmo lugar (ou pior), ainda se perguntando quem você realmente é...</p>
+        </div>
+        <div class="decision-card decision-new animate-on-scroll">
+          <h3>ESCOLHA 2: Transforme Sua Vida Hoje</h3>
+          <p>Invista em si mesma hoje. Descubra como seus ciclos naturais podem ser sua maior fonte de poder. Aprenda a viver autenticamente respeitando sua biologia feminina.</p>
+          <p>Em 28 dias, você estará reconectada consigo mesma, tomando decisões com clareza, vivendo uma vida alinhada com quem você realmente é.</p>
+        </div>
+      </div>
+      <p class="decision-footer animate-on-scroll">A escolha é sua. Mas lembre-se: cada segundo que passa vivendo no "automático" é uma oportunidade perdida de conhecer e viver como sua verdadeira essência.</p>
+    </div>
+
+    <!-- CHECKOUT FINAL -->
+    <div class="final-checkout-box animate-on-scroll">
+      <h2 class="final-checkout-title">Quero Minha Transformação Agora</h2>
+      <p class="final-checkout-subtitle">SIM, quero acesso imediato ao Código Lunar e quero:</p>
+      <ul class="final-list">
+        <li><span class="check-icon">✅</span> Os 3 Ebooks Completos do Sistema de Reconexão Cíclica (Valor R$ 541)</li>
+        <li><span class="check-icon">✅</span> Diário de Reconexão Digital (Valor R$ 47)</li>
+        <li><span class="check-icon">✅</span> Frases de Poder para Cada Fase (Valor R$ 27)</li>
+        <li><span class="check-icon">✅</span> Guia de Primeiros Socorros Emocionais (Valor R$ 37)</li>
+        <li><span class="check-icon">✅</span> Garantia Tripla de 30 Dias</li>
+        <li><span class="check-icon">✅</span> Acesso Imediato e Vitalício</li>
+      </ul>
+      <p class="total-old">TOTAL: R$ 652</p>
+      <div class="price-tag">
+        <p class="installments">12x de R$ 8,08</p>
+        <p class="price-or">ou</p>
+        <p class="main-price">R$ 97 à vista</p>
+      </div>
+      <a class="cta" href="https://payments.clickmax.io/bI10iCcWPl">QUERO TRANSFORMAR MINHA VIDA AGORA</a>
+      <p class="safe-footer">Acesso 100% online e imediato. Compatível com celular, tablet e computador.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="glow glow-3"></div>
+  <div class="container">
+    <div class="cl-faq-header">
+      <h2 class="section-title animate-on-scroll">Perguntas Frequentes</h2>
+      <div class="divider animate-on-scroll"></div>
+    </div>
+    <div class="faq-list" style="margin-top:48px;">
+      <div class="accordion animate-on-scroll">
+        <div class="accordion-header"><h2>Como recebo o acesso ao Código Lunar?</h2><span class="accordion-chevron">▼</span></div>
+        <div class="accordion-content"><p>O acesso é imediato. Assim que o pagamento for confirmado, você receberá um e-mail com todos os links para download dos Ebooks e acesso aos bônus.</p></div>
+      </div>
+      <div class="accordion animate-on-scroll">
+        <div class="accordion-header"><h2>Por quanto tempo terei acesso ao material?</h2><span class="accordion-chevron">▼</span></div>
+        <div class="accordion-content"><p>O seu acesso é vitalício. Você pode baixar os materiais e consultá-los sempre que precisar, em qualquer dispositivo.</p></div>
+      </div>
+      <div class="accordion animate-on-scroll">
+        <div class="accordion-header"><h2>E se eu não me adaptar ao método?</h2><span class="accordion-chevron">▼</span></div>
+        <div class="accordion-content"><p>Você tem nossa Garantia Tripla de 30 dias. Se por qualquer motivo você sentir que não é para você, basta nos enviar um e-mail e devolvemos 100% do seu investimento.</p></div>
+      </div>
+      <div class="accordion animate-on-scroll">
+        <div class="accordion-header"><h2>Preciso de muito tempo livre para aplicar?</h2><span class="accordion-chevron">▼</span></div>
+        <div class="accordion-content"><p>Não. O método foi desenhado para mulheres reais e ocupadas. As ferramentas de auto-observação levam menos de 5 minutos por dia.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL FOOTER ============ -->
+<footer class="final-footer">
+  <div class="container">
+    <div class="guarantee-seal animate-on-scroll">
+      <div class="seal-circle">
+        <span class="seal-number">30</span><span class="seal-text">Dias</span>
+      </div>
+      <h2 class="guarantee-headline">100% de garantia ou seu dinheiro de volta</h2>
+      <p class="guarantee-sub">Se você não se reconectar com sua essência feminina em até 30 dias, devolvemos seu dinheiro sem perguntas.</p>
+    </div>
+    <div class="post-scriptum">
+      <div class="ps-item animate-on-scroll">
+        <span class="ps-label">P.S.:</span>
+        <p class="ps-text">Lembra da Marina que mencionei no início? Ela era exatamente como você - perdida, vivendo no automático, se culpando pelos altos e baixos. Hoje, 6 meses depois de descobrir o Código Lunar, ela me mandou uma mensagem que dizia:</p>
+        <div class="ps-quote">"Pela primeira vez em anos, eu me reconheço quando olho no espelho. Obrigada por me devolver para mim mesma."</div>
+        <p class="ps-text">Sua transformação pode começar hoje. Mas só se você tomar a decisão.</p>
+      </div>
+      <div class="ps-item animate-on-scroll">
+        <span class="ps-label">P.P.S.:</span>
+        <p class="ps-text">Esta oferta de <strong>R$ 147</strong> expira hoje às 23h59. Depois disso, o valor volta para R$ 497 e os bônus exclusivos não estarão mais disponíveis. Não deixe para depois a decisão mais importante da sua vida.</p>
+      </div>
+    </div>
+    <a class="cta animate-on-scroll" href="https://payments.clickmax.io/bI10iCcWPl">SIM, EU QUERO MINHA TRANSFORMAÇÃO AGORA</a>
+    <div class="footer-bottom">
+      <img class="footer-logo-img" alt="Código Lunar Logo" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/a492d0cb-ecc7-4585-aa8c-028f65539d69" loading="lazy"/>
+      <div class="footer-nav">
+        <a href="#">Privacidade</a><a href="#">Termos</a>
+      </div>
+      <p class="copyright">© 2026 Código Lunar. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MINI FOOTER ============ -->
+<section class="mini-footer">
+  <div class="mini-footer-container">
+    <div class="mini-footer-copy">© 2026 Código Lunar. All Rights Reserved.</div>
+    <div class="mini-footer-logo">
+      <img alt="Logo Código Lunar" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/a492d0cb-ecc7-4585-aa8c-028f65539d69" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<script>
+// Fade-in on scroll with stagger
+(function(){
+  var els = document.querySelectorAll('.animate-on-scroll');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('visible');});
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var group = entry.target.parentElement
+          ? Array.prototype.indexOf.call(entry.target.parentElement.children, entry.target)
+          : 0;
+        entry.target.style.transitionDelay = (group % 6 * 0.1) + 's';
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){observer.observe(el);});
+})();
+
+// FAQ accordion
+(function(){
+  var headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(function(header){
+    header.addEventListener('click', function(){
+      var acc = header.parentElement;
+      var content = header.nextElementSibling;
+      var isOpen = acc.classList.contains('open');
+      if(isOpen){
+        acc.classList.remove('open');
+        content.style.maxHeight = null;
+      } else {
+        acc.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
