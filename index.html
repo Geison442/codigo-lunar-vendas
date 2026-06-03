@@ -171,7 +171,9 @@ h3{font-size:28px;}
   text-shadow:rgba(205,184,255,0.2) 0 0 60px;
   max-width:1000px;
   margin:0 auto;
+  font-style:italic;
 }
+.hero h2{font-style:italic;}
 .hero-sub1{
   font-size:22px;
   color:#fff;
@@ -290,8 +292,11 @@ h3{font-size:28px;}
 .produto-capa{
   border-radius:16px;
   border:1px solid var(--card-border);
+  max-width:200px;
+  max-height:120px;
+  object-fit:contain;
+  display:block;
   margin:0 auto;
-  max-width:360px;
 }
 .produto-cta-box{
   text-align:center;
@@ -371,6 +376,8 @@ h3{font-size:28px;}
   padding:6px 14px;
   border-radius:50px;
   margin-bottom:18px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
 }
 .ebook-mockup{
   border-radius:12px;
@@ -416,6 +423,7 @@ h3{font-size:28px;}
   padding:10px 20px;
   border-radius:50px;
   margin-bottom:28px;
+  letter-spacing:0.08em;
 }
 .checkout-logo{max-width:160px;margin:0 auto 28px;}
 .deliverables-list{list-style:none;text-align:left;max-width:420px;margin:0 auto 28px;}
@@ -426,6 +434,19 @@ h3{font-size:28px;}
 .price-main{margin-top:6px;}
 .price-prefix{display:block;color:var(--text-2);font-size:16px;}
 .price-value{font-family:"DM Serif Display",serif;font-size:52px;color:var(--gold);text-shadow:0 0 30px rgba(212,183,119,0.4);}
+.value-breakdown{max-width:420px;margin:0 auto 24px;text-align:left;border:1px solid var(--card-border);border-radius:12px;padding:18px 20px;}
+.breakdown-row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:var(--text-2);font-size:15px;}
+.breakdown-row:last-child{border-bottom:none;}
+.breakdown-row span:last-child{color:var(--gold);font-weight:700;white-space:nowrap;}
+.anchor-block{display:flex;flex-direction:column;align-items:center;gap:6px;margin:8px 0 18px;}
+.anchor-real{display:flex;align-items:baseline;gap:10px;}
+.anchor-real-price{font-family:"DM Serif Display",serif;font-size:26px;color:var(--text-2);text-decoration:line-through;}
+.anchor-arrow{color:var(--gold);font-size:22px;line-height:1;}
+.anchor-today{display:flex;align-items:baseline;gap:10px;}
+.anchor-today-price{font-family:"DM Serif Display",serif;font-size:52px;color:var(--gold);text-shadow:0 0 30px rgba(212,183,119,0.4);line-height:1;}
+.anchor-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-2);}
+.anchor-save{display:inline-block;margin-top:6px;background:rgba(5,150,105,0.15);border:1px solid rgba(5,150,105,0.4);color:#34d399;font-weight:700;font-size:14px;padding:8px 18px;border-radius:50px;letter-spacing:0.04em;}
+.anchor-exclusive{color:var(--gold);font-size:14px;font-style:italic;margin-top:4px;}
 .checkout-footer{margin-top:24px;}
 .guarantee-text{color:var(--text-2);font-size:15px;margin-bottom:12px;}
 .security-badges{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;color:var(--text-2);font-size:14px;}
@@ -869,7 +890,7 @@ h3{font-size:28px;}
       <div class="card ebook-card animate-on-scroll">
         <span class="ebook-badge">VALOR: R$ 297</span>
         <img class="ebook-mockup" alt="Mapeamento das 4 Fases Internas" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/sdtONRaqAKbsBpBw.png" loading="lazy"/>
-        <p class="ebook-number"><span class="app-logo" style="background:rgba(124,58,237,0.15);color:#7C3AED;">☽</span> Ebook 1</p>
+        <p class="ebook-number"><span class="app-logo" style="background:#7C3AED;color:#fff;">☽</span> Ebook 1</p>
         <h3 class="ebook-name">"Mapeamento das 4 Fases Internas"</h3>
         <h3 class="ebook-name" style="font-size:18px;color:var(--gold);">NÃO É UM PDF! É um sistema inteligente que:</h3>
         <ul class="ebook-list">
@@ -884,7 +905,7 @@ h3{font-size:28px;}
       <div class="card ebook-card animate-on-scroll">
         <span class="ebook-badge">VALOR: R$ 197</span>
         <img class="ebook-mockup" alt="Protocolo de Reconexão Prática" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/ORWcOKPRnZTPLUoA.png" loading="lazy"/>
-        <p class="ebook-number"><span class="app-logo" style="background:rgba(5,150,105,0.15);color:#059669;">☽</span> Ebook 2</p>
+        <p class="ebook-number"><span class="app-logo" style="background:#059669;color:#fff;">☽</span> Ebook 2</p>
         <h3 class="ebook-name">"Protocolo de Reconexão Prática"</h3>
         <ul class="ebook-list">
           <li><span class="star">✨</span><span>Os 4 pilares de reorganização da vida baseados nas suas fases naturais</span></li>
@@ -898,7 +919,7 @@ h3{font-size:28px;}
       <div class="card ebook-card animate-on-scroll">
         <span class="ebook-badge">VALOR: R$ 147</span>
         <img class="ebook-mockup" alt="Integração e Sustentação" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663264998936/uejDRhMUwymJCuao.png" loading="lazy"/>
-        <p class="ebook-number"><span class="app-logo" style="background:rgba(14,165,233,0.15);color:#0EA5E9;">☽</span> Ebook 3</p>
+        <p class="ebook-number"><span class="app-logo" style="background:#0EA5E9;color:#fff;">☽</span> Ebook 3</p>
         <h3 class="ebook-name">"Integração e Sustentação"</h3>
         <ul class="ebook-list">
           <li><span class="star">✨</span><span>Como manter a conexão consigo mesma no longo prazo (mesmo com pressões externas)</span></li>
@@ -924,21 +945,21 @@ h3{font-size:28px;}
       <div class="card bonus-card animate-on-scroll">
         <span class="bonus-badge">🎁 BÔNUS 1</span>
         <img class="bonus-image" alt="Diário de Empoderamento Feminino" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/11df0e11-0b43-4935-96ab-0d7cfb6d63a6" loading="lazy"/>
-        <h3 class="bonus-card-title"><span class="app-logo" style="background:rgba(192,132,252,0.15);color:#C084FC;">✦</span> Diário de Empoderamento Feminino</h3>
+        <h3 class="bonus-card-title"><span class="app-logo" style="background:#C084FC;color:#fff;">✦</span> Diário de Empoderamento Feminino</h3>
         <p class="bonus-value">VALOR: R$ 97</p>
         <p class="bonus-description">Um guia prático e luxuoso para registrar sua jornada de autodescoberta e fortalecer sua confiança diariamente.</p>
       </div>
       <div class="card bonus-card animate-on-scroll">
         <span class="bonus-badge">🎁 BÔNUS 2</span>
         <img class="bonus-image" alt="Coleção de Afirmações Lunares" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/65498ed7-6d82-4d1f-8a21-558fcf83ccc8" loading="lazy"/>
-        <h3 class="bonus-card-title">Coleção de Afirmações Lunares</h3>
+        <h3 class="bonus-card-title"><span class="app-logo" style="background:#E11D48;color:#fff;">◈</span> Coleção de Afirmações Lunares</h3>
         <p class="bonus-value">VALOR: R$ 67</p>
         <p class="bonus-description">Cartas digitais com afirmações poderosas alinhadas às fases da lua para reprogramar sua mente com sabedoria.</p>
       </div>
       <div class="card bonus-card animate-on-scroll">
         <span class="bonus-badge">🎁 BÔNUS 3</span>
         <img class="bonus-image" alt="BemLab" src="https://projects.clickmax.io/2e1275e1-9015-4281-9f16-70b1e90da7e6/assets/efa7cacd-36c5-47b2-a29a-c4bd21138b7b" loading="lazy"/>
-        <h3 class="bonus-card-title"><span class="app-logo" style="background:rgba(233,30,99,0.15);color:#E91E63;">🧪</span> BemLab</h3>
+        <h3 class="bonus-card-title"><span class="app-logo" style="background:#E91E63;color:#fff;">🧪</span> BemLab</h3>
         <p class="bonus-value">VALOR: R$ 87</p>
         <p class="bonus-description">Estratégias essenciais para manter o equilíbrio interior e cuidar da sua saúde emocional em todas as fases.</p>
       </div>
@@ -963,11 +984,21 @@ h3{font-size:28px;}
         <li><span class="icon-star">✦</span> Todos os Bônus Exclusivos</li>
       </ul>
       <div class="pricing-container">
-        <div class="price-anchor">De R$ 652,00</div>
-        <div class="price-main">
-          <span class="price-prefix">Por apenas</span>
-          <span class="price-value">R$ 97,00</span>
+        <div class="value-breakdown">
+          <div class="breakdown-row"><span>Ebook 1 — Mapeamento das 4 Fases</span><span>R$ 297</span></div>
+          <div class="breakdown-row"><span>Ebook 2 — Protocolo de Reconexão Prática</span><span>R$ 397</span></div>
+          <div class="breakdown-row"><span>Ebook 3 — Integração e Sustentação</span><span>R$ 247</span></div>
+          <div class="breakdown-row"><span>Diário de Empoderamento Feminino</span><span>R$ 97</span></div>
+          <div class="breakdown-row"><span>Quiz Cíclico</span><span>R$ 67</span></div>
+          <div class="breakdown-row"><span>BemLab</span><span>R$ 87</span></div>
         </div>
+        <div class="anchor-block">
+          <div class="anchor-real"><span class="anchor-tag">Valor real</span><span class="anchor-real-price">R$ 1.192</span></div>
+          <div class="anchor-arrow">↓</div>
+          <div class="anchor-today"><span class="anchor-tag">Hoje</span><span class="anchor-today-price">R$ 197</span></div>
+          <span class="anchor-save">Você economiza R$ 995</span>
+        </div>
+        <p class="anchor-exclusive">Preço exclusivo para as primeiras 500 mulheres do pré-lançamento</p>
       </div>
       <a class="cta" href="https://payments.clickmax.io/bI10iCcWPl">Obtenha acesso instantâneo</a>
       <div class="checkout-footer">
@@ -1070,7 +1101,7 @@ h3{font-size:28px;}
         <p>Como quero colocar este método nas mãos de apenas 500 mulheres comprometidas com sua transformação, você consegue acesso completo ao Código Lunar por apenas:</p>
         <a class="price-button" href="https://payments.clickmax.io/bI10iCcWPl">
           <span class="btn-old-price">De R$ 2.847</span>
-          <span class="btn-new-price">R$ 97</span>
+          <span class="btn-new-price">R$ 197</span>
           <span class="btn-subtext">Aproveitar Oferta Vitalícia</span>
         </a>
         <div class="final-cta-text">
@@ -1102,7 +1133,7 @@ h3{font-size:28px;}
     <!-- ESCASSEZ -->
     <div class="scarcity-box animate-on-scroll">
       <h2 class="scarcity-title">ATENÇÃO: Esta Oferta Tem Data Para Acabar</h2>
-      <p class="scarcity-text">Esta oferta especial de <strong>R$ 97</strong> é limitada para as primeiras 500 mulheres que reconhecem que é hora de parar de viver no piloto automático.<br>Depois disso, o valor volta para <strong>R$ 497</strong> (o investimento normal para este nível de transformação).<br>Além disso, os bônus exclusivos só estão disponíveis nesta promoção.</p>
+      <p class="scarcity-text">Esta oferta especial de <strong>R$ 197</strong> é limitada para as primeiras 500 mulheres que reconhecem que é hora de parar de viver no piloto automático.<br>Depois disso, o valor volta para <strong>R$ 497</strong> (o investimento normal para este nível de transformação).<br>Além disso, os bônus exclusivos só estão disponíveis nesta promoção.</p>
     </div>
 
     <!-- DECISÃO FINAL -->
@@ -1139,7 +1170,7 @@ h3{font-size:28px;}
       <div class="price-tag">
         <p class="installments">12x de R$ 8,08</p>
         <p class="price-or">ou</p>
-        <p class="main-price">R$ 97 à vista</p>
+        <p class="main-price">R$ 197 à vista</p>
       </div>
       <a class="cta" href="https://payments.clickmax.io/bI10iCcWPl">QUERO TRANSFORMAR MINHA VIDA AGORA</a>
       <p class="safe-footer">Acesso 100% online e imediato. Compatível com celular, tablet e computador.</p>
